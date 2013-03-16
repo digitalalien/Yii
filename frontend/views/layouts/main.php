@@ -42,7 +42,81 @@
 
 <body>
 <div class="container">
-	<?php echo $content?>
+    <?php $this->widget('bootstrap.widgets.TbNavbar', array(
+    'type'=>'inverse', // null or 'inverse'
+    'brand'=>'Project name',
+    'brandUrl'=>'#',
+    'collapse'=>true, // requires bootstrap-responsive.css
+    'items'=>array(
+        array(
+            'class'=>'bootstrap.widgets.TbMenu',
+            'items'=>array(
+                array('label'=>'Home', 'url'=>'#', 'active'=>true),
+                array('label'=>'Link', 'url'=>'#'),
+                array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
+                    array('label'=>'Action', 'url'=>'#'),
+                    array('label'=>'Another action', 'url'=>'#'),
+                    array('label'=>'Something else here', 'url'=>'#'),
+                    '---',
+                    array('label'=>'NAV HEADER'),
+                    array('label'=>'Separated link', 'url'=>'#'),
+                    array('label'=>'One more separated link', 'url'=>'#'),
+                )),
+            ),
+        ),
+        '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+        array(
+            'class'=>'bootstrap.widgets.TbMenu',
+            'htmlOptions'=>array('class'=>'pull-right'),
+            'items'=>array(
+                array('label'=>'Link', 'url'=>'#'),
+                array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
+                    array('label'=>'Action', 'url'=>'#'),
+                    array('label'=>'Another action', 'url'=>'#'),
+                    array('label'=>'Something else here', 'url'=>'#'),
+                    '---',
+                    array('label'=>'Separated link', 'url'=>'#'),
+                )),
+            ),
+        ),
+    ),
+)); ?>
+</div>
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Getting started</h1>
+    <p class="lead">Overview of the project, its contents, and how to get started with a simple template.</p>
+  </div>
+</header>
+
+<!-- Side Nav
+================================================== -->
+<div class="container">
+    <div class="row">
+        <div class="span3 sideMenu">
+            <div class="content">
+                <?php $this->widget('bootstrap.widgets.TbMenu', array(
+                    'type'=>'list',
+                    'items'=>array(
+                        array('label'=>'LIST HEADER'),
+                        array('label'=>'Home', 'icon'=>'home', 'url'=>'#', 'active'=>true),
+                        array('label'=>'Library', 'icon'=>'book', 'url'=>'#'),
+                        array('label'=>'Application', 'icon'=>'pencil', 'url'=>'#'),
+                        array('label'=>'ANOTHER LIST HEADER'),
+                        array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
+                        array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
+                        array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
+                    ),
+                )); ?>
+            </div>
+        </div>
+    
+        <div class="span9">
+    	    <?php echo $content?>
+        </div>
+    </div>
 </div>
 
 <!-- Google Analytics -->

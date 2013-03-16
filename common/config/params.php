@@ -38,6 +38,11 @@ return CMap::mergeArray(array(
 		'autoCreateCacheTable' => true,
 		'cacheTableName' => 'cache',
 	),
+    'db'=>array(
+        'connectionString' => 'mysql:host=purplepages.db.10691077.hostedresource.com',
+        'username' => 'purplepages',
+        'password' => 'Alien9987!',
+    ),
 
 	// url rules needed by CUrlManager
 	'url.rules' => array(

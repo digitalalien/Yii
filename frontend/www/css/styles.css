@@ -1,9 +1,9 @@
 /**
  * styles.css
  *
- * @author: antonio ramirez <antonio@clevertech.biz>
- * Date: 7/23/12
- * Time: 12:31 AM
+ * @author: Andrew Mallonee
+ * Date: 3/12/2013
+ * Time: 5:09 PM
  */
 
 /*
@@ -15,3 +15,14 @@ root {
     display: block;
 }
 
+.sideMenu{=
+    margin: 50px;
+    box-shadow: 3px 0 5px #888;
+}
+.sideMenu #content{
+    margin: 10px;
+}
+
+.container{
+    width: 100%;
+}
