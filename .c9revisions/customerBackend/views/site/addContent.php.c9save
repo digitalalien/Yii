@@ -1,0 +1,15 @@
+{"ts":1363193035803,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":true,"ts":1363193050974,"patch":[[{"diffs":[[1,"<div class=\"row-fluid\">\r\n    <div class=\"span6\">\r\n      <h2>Layout 1</h2>\r\n      <p><img src=\"holder.js/300x200\"></p>\r\n      <p><a class=\"btn btn-large btn-primary\">Use Layout 1</a></p>\r\n    </div>"]],"start1":0,"start2":0,"length1":0,"length2":197}]],"length":197,"saved":false}
+{"ts":1363193052383,"patch":[[{"diffs":[[0,"  </div>"],[1,"\r\n"]],"start1":189,"start2":189,"length1":8,"length2":10}]],"length":199,"saved":false}
+{"ts":1363193053546,"patch":[[{"diffs":[[0,"</div>\r\n"],[1,"</di"]],"start1":191,"start2":191,"length1":8,"length2":12}]],"length":203,"saved":false}
+{"ts":1363193054707,"patch":[[{"diffs":[[0,"</div>\r\n</di"],[1,"v>"]],"start1":191,"start2":191,"length1":12,"length2":14}]],"length":205,"saved":false}
+{"ts":1363193057473,"patch":[[{"diffs":[[0,"span"],[-1,"6"],[1,"12"],[0,"\">\r\n"]],"start1":41,"start2":41,"length1":9,"length2":10}]],"length":206,"saved":false}
+{"ts":1363193060593,"patch":[[{"diffs":[[0,"span"],[-1,"12"],[1,"9"],[0,"\">\r\n"]],"start1":41,"start2":41,"length1":10,"length2":9}]],"length":205,"saved":false}
+{"ts":1363193074663,"patch":[[{"diffs":[[0,"span"],[-1,"9"],[1,"12"],[0,"\">\r\n"]],"start1":41,"start2":41,"length1":9,"length2":10}]],"length":206,"saved":false}
+{"ts":1363193079456,"patch":[[{"diffs":[[0,".js/"],[-1,"3"],[0,"00x2"]],"start1":101,"start2":101,"length1":9,"length2":8}]],"length":205,"saved":false}
+{"ts":1363193080382,"patch":[[{"diffs":[[0,"lder.js/"],[1,"6"],[0,"00x200\">"]],"start1":97,"start2":97,"length1":16,"length2":17}]],"length":206,"saved":false}
+{"ts":1363193081988,"patch":[[{"diffs":[[0,".js/600x"],[-1,"2"],[0,"00\"></p>"]],"start1":101,"start2":101,"length1":17,"length2":16}]],"length":205,"saved":false}
+{"ts":1363193082692,"patch":[[{"diffs":[[0,".js/600x"],[1,"4"],[0,"00\"></p>"]],"start1":101,"start2":101,"length1":16,"length2":17}]],"length":206,"saved":false}
+{"ts":1363193613694,"patch":[[{"diffs":[[0,"p>\r\n"],[-1,"      <p><a class=\"btn btn-large btn-primary\">Use Layout 1</a></p>\r\n"],[0,"    "]],"start1":116,"start2":116,"length1":76,"length2":8}]],"length":138,"saved":false}
+{"ts":1363193617248,"patch":[[{"diffs":[[0,".js/"],[-1,"6"],[1,"8"],[0,"00x4"]],"start1":101,"start2":101,"length1":9,"length2":9}]],"length":138,"saved":false}
+{"ts":1363193618690,"patch":[[{"diffs":[[0,"800x"],[-1,"4"],[1,"6"],[0,"00\">"]],"start1":105,"start2":105,"length1":9,"length2":9}]],"length":138,"saved":false}
