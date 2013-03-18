@@ -48,6 +48,7 @@ return CMap::mergeArray(
 		'import' => array(
 			'common.components.*',
 			'common.extensions.*',
+            'common.extensions.imageEdit.*',
 			'common.models.*',
 			// uncomment if behaviors are required
 			// you can also import a specific one
