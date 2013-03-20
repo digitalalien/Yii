@@ -50,6 +50,9 @@ return CMap::mergeArray(
 			'common.extensions.*',
             'common.extensions.imageEdit.*',
 			'common.models.*',
+            //Rights Module
+            'common.modules.rights.*',
+            'common.modules.rights.components.*',
 			// uncomment if behaviors are required
 			// you can also import a specific one
 			/* 'common.extensions.behaviors.*', */
@@ -61,7 +64,15 @@ return CMap::mergeArray(
 		),
 		/* uncomment and set if required */
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
-		/* 'modules' => array(), */
+		'modules' => array(
+            'rights'=> array(
+                'install' => true,    
+            ),
+            'gii'=>array(
+                'class'=>'system.gii.GiiModule',
+                'password'=>'Alien9987!'.
+            ),
+        ), 
 		'components' => array(
 			'errorHandler' => array(
 				// @see http://www.yiiframework.com/doc/api/1.1/CErrorHandler#errorAction-detail
@@ -85,6 +96,12 @@ return CMap::mergeArray(
 				'urlSuffix' => '/',
 				'rules' => $params['url.rules']
 			),
+            'user' => array(
+                'class' => 'RWebUser',    
+            ),
+            'authManager' => array(
+                'class' => 'RDBAuthManager',  
+            ),
 			/* make sure you have your cache set correctly before uncommenting */
 			/* 'cache' => $params['cache.core'], */
 			/* 'contentCache' => $params['cache.content'] */
