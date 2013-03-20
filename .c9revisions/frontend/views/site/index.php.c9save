@@ -1,0 +1,65 @@
+{"ts":1363443639074,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"<?php\n/**\n * index.php\n *\n * @author: antonio ramirez <antonio@clevertech.biz>\n * Date: 7/22/12\n * Time: 8:30 PM\n */\n?>\nThis is index view file..."]],"start1":0,"start2":0,"length1":0,"length2":146}]],"length":146}
+{"contributors":[],"silentsave":true,"ts":1363443646209,"patch":[[{"diffs":[[0,"\n?>\n"],[-1,"This is index view file..."],[1,"<?php echo SFHtml::errorSummary($form); ?> \n<?=CHtml::beginForm(null, 'POST')?>\n<? //$form in this example is of type AvatarForm, containing variables for the crop area's x, y, width and height, hence the corresponding widget form element parameters ?>\n<?=CHtml::activeHiddenField($form, 'cropID');?>\n<?=CHtml::activeHiddenField($form, 'cropX', array('value' => '0'));?>\n<?=CHtml::activeHiddenField($form, 'cropY', array('value' => '0'));?>\n<?=CHtml::activeHiddenField($form, 'cropW', array('value' => '100'));?>\n<?=CHtml::activeHiddenField($form, 'cropH', array('value' => '100'));?>\n<?$previewWidth = 100; $previewHeight = 100;?>\n<?$this->widget('ext.jcrop.jCropWidget',array(\n    \t'imageUrl'=>$imageUrl,\n\t\t'formElementX'=>'AvatarForm_cropX',\n\t\t'formElementY'=>'AvatarForm_cropY',\n\t\t'formElementWidth'=>'AvatarForm_cropW',\n\t\t'formElementHeight'=>'AvatarForm_cropH',\n\t\t'previewId'=>'avatar-preview', //optional preview image ID, see preview div below\n\t\t'previewWidth'=>$previewWidth,\n\t\t'previewHeight'=>$previewHeight,\n\t\t'jCropOptions'=>array(\n\t\t\t'aspectRatio'=>1, \n\t\t\t'boxWidth'=>400,\n\t\t\t'boxHeight'=>400,\n\t\t\t'setSelect'=>array(0, 0, 100, 100),\n\t\t),\n\t)\n);\n?>\n"]],"start1":116,"start2":116,"length1":30,"length2":1165}]],"length":1281,"saved":false}
+{"ts":1363443794040,"patch":[[{"diffs":[[0,"\n */\n?>\n"],[1,"TEsting\n"],[0,"<?php ec"]],"start1":112,"start2":112,"length1":16,"length2":24}]],"length":1289,"saved":false}
+{"ts":1363443844104,"patch":[[{"diffs":[[0,"\n?>\n"],[-1,"TEsting\n"],[0,"<?ph"]],"start1":116,"start2":116,"length1":16,"length2":8}]],"length":1281,"saved":false}
+{"ts":1363443847846,"patch":[[{"diffs":[[0," 100;?>\n"],[1,"\n"],[0,"<?$this-"]],"start1":744,"start2":744,"length1":16,"length2":17}]],"length":1282,"saved":false}
+{"ts":1363443850671,"patch":[[{"diffs":[[0," 100;?>\n"],[1,"testing"],[0,"\n<?$this"]],"start1":744,"start2":744,"length1":16,"length2":23}]],"length":1289,"saved":false}
+{"ts":1363443856797,"patch":[[{"diffs":[[0,"m); ?> \n"],[1,"\n"],[0,"<?=CHtml"]],"start1":156,"start2":156,"length1":16,"length2":17}]],"length":1290,"saved":false}
+{"ts":1363443859208,"patch":[[{"diffs":[[0,"m); ?> \n"],[1,"testing"],[0,"\n<?=CHtm"]],"start1":156,"start2":156,"length1":16,"length2":23}]],"length":1297,"saved":false}
+{"ts":1363443902442,"patch":[[{"diffs":[[0,">\n<?php "],[1,"//"],[0,"echo SFH"]],"start1":118,"start2":118,"length1":16,"length2":18}]],"length":1299,"saved":false}
+{"ts":1363443915255,"patch":[[{"diffs":[[0,"m); ?> \n"],[-1,"testing\n"],[0,"<?=CHtml"]],"start1":158,"start2":158,"length1":24,"length2":16}]],"length":1291,"saved":false}
+{"ts":1363443928556,"patch":[[{"diffs":[[0,";?>\n"],[-1,"testing\n"],[0,"<?$t"]],"start1":750,"start2":750,"length1":16,"length2":8}]],"length":1283,"saved":false}
+{"ts":1363443932672,"patch":[[{"diffs":[[0,"; ?> \n<?"],[-1,"="],[1,"ph"],[0,"CHtml::b"]],"start1":160,"start2":160,"length1":17,"length2":18}]],"length":1284,"saved":false}
+{"ts":1363443934504,"patch":[[{"diffs":[[0,"?> \n<?ph"],[1,"p "],[0,"CHtml::b"]],"start1":162,"start2":162,"length1":16,"length2":18}]],"length":1286,"saved":false}
+{"ts":1363443940321,"patch":[[{"diffs":[[0,"T')?>\n<?"],[1,"php"],[0," //$form"]],"start1":199,"start2":199,"length1":16,"length2":19}]],"length":1289,"saved":false}
+{"ts":1363443941892,"patch":[[{"diffs":[[0,"meters ?>\n<?"],[-1,"="],[1,"ph"],[0,"CHtml::activ"]],"start1":371,"start2":371,"length1":25,"length2":26}]],"length":1290,"saved":false}
+{"ts":1363443942921,"patch":[[{"diffs":[[0," ?>\n<?ph"],[1,"p "],[0,"CHtml::a"]],"start1":377,"start2":377,"length1":16,"length2":18}]],"length":1292,"saved":false}
+{"ts":1363443944725,"patch":[[{"diffs":[[0,"opID');?>\n<?"],[-1,"="],[1,"ph"],[0,"CHtml::activ"]],"start1":422,"start2":422,"length1":25,"length2":26}]],"length":1293,"saved":false}
+{"ts":1363443946176,"patch":[[{"diffs":[[0,";?>\n<?ph"],[1,"p "],[0,"CHtml::a"]],"start1":428,"start2":428,"length1":16,"length2":18}]],"length":1295,"saved":false}
+{"ts":1363443948488,"patch":[[{"diffs":[[0,"' => '0'));?>\n<?"],[-1,"="],[0,"CHtml::activeHid"]],"start1":491,"start2":491,"length1":33,"length2":32}]],"length":1294,"saved":false}
+{"ts":1363443949750,"patch":[[{"diffs":[[0,"));?>\n<?"],[1,"ph "],[0,"CHtml::a"]],"start1":499,"start2":499,"length1":16,"length2":19}]],"length":1297,"saved":false}
+{"ts":1363443951124,"patch":[[{"diffs":[[0,";?>\n<?ph"],[1,"p"],[0," CHtml::"]],"start1":501,"start2":501,"length1":16,"length2":17}]],"length":1298,"saved":false}
+{"ts":1363443953528,"patch":[[{"diffs":[[0,"' => '0'));?>\n<?"],[-1,"="],[1,"p"],[0,"CHtml::activeHid"]],"start1":564,"start2":564,"length1":33,"length2":33}]],"length":1298,"saved":false}
+{"ts":1363443955540,"patch":[[{"diffs":[[0,");?>\n<?p"],[1,"hp "],[0,"CHtml::a"]],"start1":573,"start2":573,"length1":16,"length2":19}]],"length":1301,"saved":false}
+{"ts":1363443957865,"patch":[[{"diffs":[[0,"));?>\n<?"],[-1,"="],[0,"CHtml::a"]],"start1":647,"start2":647,"length1":17,"length2":16}]],"length":1300,"saved":false}
+{"ts":1363443960258,"patch":[[{"diffs":[[0,"));?>\n<?"],[1,"ph"],[0,"CHtml::a"]],"start1":647,"start2":647,"length1":16,"length2":18}]],"length":1302,"saved":false}
+{"ts":1363443961222,"patch":[[{"diffs":[[0,";?>\n<?ph"],[1,"p "],[0,"CHtml::a"]],"start1":649,"start2":649,"length1":16,"length2":18}]],"length":1304,"saved":false}
+{"ts":1363443965728,"patch":[[{"diffs":[[0,"));?>\n<?"],[1,"php "],[0,"$preview"]],"start1":722,"start2":722,"length1":16,"length2":20}]],"length":1308,"saved":false}
+{"ts":1363443969894,"patch":[[{"diffs":[[0,"00;?>\n<?"],[1,"php "],[0,"$this->w"]],"start1":773,"start2":773,"length1":16,"length2":20}]],"length":1312,"saved":false}
+{"ts":1363443978141,"patch":[[{"diffs":[[0,"ht = 100;?>\n"],[1,"\n"],[0,"<?php $this-"]],"start1":767,"start2":767,"length1":24,"length2":25}]],"length":1313,"saved":false}
+{"ts":1363443979745,"patch":[[{"diffs":[[0," 100;?>\n"],[1,"test"],[0,"\n<?php $"]],"start1":771,"start2":771,"length1":16,"length2":20}]],"length":1317,"saved":false}
+{"ts":1363443986499,"patch":[[{"diffs":[[0,"OST')?>\n"],[1,"\n"],[0,"<?php //"]],"start1":197,"start2":197,"length1":16,"length2":17}]],"length":1318,"saved":false}
+{"ts":1363443988007,"patch":[[{"diffs":[[0,"OST')?>\n"],[1,"test"],[0,"\n<?php /"]],"start1":197,"start2":197,"length1":16,"length2":20}]],"length":1322,"saved":false}
+{"ts":1363444004333,"patch":[[{"diffs":[[0,"m); ?> \n"],[1,"\n"],[0,"<?php CH"]],"start1":158,"start2":158,"length1":16,"length2":17}]],"length":1323,"saved":false}
+{"ts":1363444010609,"patch":[[{"diffs":[[0,"m); ?> \n"],[1,"test"],[0,"\n<?php C"]],"start1":158,"start2":158,"length1":16,"length2":20}]],"length":1327,"saved":false}
+{"ts":1363444025648,"patch":[[{"diffs":[[0,"?php"],[-1," //echo SFHtml::errorSummary($form);"],[0," ?> "]],"start1":121,"start2":121,"length1":44,"length2":8}]],"length":1291,"saved":false}
+{"ts":1363444028256,"patch":[[{"diffs":[[0,">\n<?php "],[1,"echo"],[0,"?> \ntest"]],"start1":118,"start2":118,"length1":16,"length2":20}]],"length":1295,"saved":false}
+{"ts":1363444030273,"patch":[[{"diffs":[[0,"php echo"],[1," "],[0,"?> \ntest"]],"start1":122,"start2":122,"length1":16,"length2":17}]],"length":1296,"saved":false}
+{"ts":1363444034625,"patch":[[{"diffs":[[0,"hp echo "],[1,"'your face';"],[0,"?> \ntest"]],"start1":123,"start2":123,"length1":16,"length2":28}]],"length":1308,"saved":false}
+{"ts":1363444077133,"patch":[[{"diffs":[[0," 'POST')"],[1,";"],[0,"?>\ntest\n"]],"start1":180,"start2":180,"length1":16,"length2":17}]],"length":1309,"saved":false}
+{"ts":1363444078142,"patch":[[{"diffs":[[0,"'POST');"],[1," "],[0,"?>\ntest\n"]],"start1":181,"start2":181,"length1":16,"length2":17}]],"length":1310,"saved":false}
+{"ts":1363444288969,"patch":[[{"diffs":[[0,"php "],[1,"//"],[0,"echo "],[-1,"'your face';"],[1,"SFHtml::errorSummary($form); "],[0,"?> \nte"],[-1,"st"],[0,"\n<?p"]],"start1":122,"start2":122,"length1":33,"length2":50},{"diffs":[[0," 'POST')"],[-1,"; "],[0,"?>\ntest\n"]],"start1":197,"start2":197,"length1":18,"length2":16}]],"length":1325,"saved":false}
+{"ts":1363444291127,"patch":[[{"diffs":[[0,"?> \n"],[-1,"te\n"],[0,"<?ph"]],"start1":162,"start2":162,"length1":11,"length2":8}]],"length":1322,"saved":false}
+{"ts":1363444295241,"patch":[[{"diffs":[[0,"OST')?>\n"],[-1,"test"],[0,"\n<?php /"]],"start1":197,"start2":197,"length1":20,"length2":16}]],"length":1318,"saved":false}
+{"ts":1363444296274,"patch":[[{"diffs":[[0,"OST')?>\n"],[-1,"\n"],[0,"<?php //"]],"start1":197,"start2":197,"length1":17,"length2":16}]],"length":1317,"saved":false}
+{"ts":1363444437201,"patch":[[{"diffs":[[0,">\n<?php "],[-1,"//"],[0,"echo SFH"]],"start1":118,"start2":118,"length1":18,"length2":16}]],"length":1315,"saved":false}
+{"ts":1363444561179,"patch":[[{"diffs":[[0,"; ?> \n<?php "],[1,"$form "],[0,"CHtml::begin"]],"start1":158,"start2":158,"length1":24,"length2":30}]],"length":1321,"saved":false}
+{"ts":1363444562499,"patch":[[{"diffs":[[0,"hp $form"],[1," ="],[0," CHtml::"]],"start1":167,"start2":167,"length1":16,"length2":18}]],"length":1323,"saved":false}
+{"ts":1363444566150,"patch":[[{"diffs":[[0,">\n<?php "],[1,"//"],[0,"echo SFH"]],"start1":118,"start2":118,"length1":16,"length2":18}]],"length":1325,"saved":false}
+{"ts":1363444583852,"patch":[[{"diffs":[[0,"?php"],[-1," $form ="],[0," CHt"]],"start1":167,"start2":167,"length1":16,"length2":8}]],"length":1317,"saved":false}
+{"ts":1363444605392,"patch":[[{"diffs":[[0,">\n<?php "],[-1,"//"],[0,"echo SFH"]],"start1":118,"start2":118,"length1":18,"length2":16}]],"length":1315,"saved":false}
+{"ts":1363444756534,"patch":[[{"diffs":[[0,"cho "],[-1,"SF"],[1,"C"],[0,"Html"]],"start1":127,"start2":127,"length1":10,"length2":9}]],"length":1314,"saved":false}
+{"ts":1363444811368,"patch":[[{"diffs":[[0,">\n<?php "],[1,"//"],[0,"echo CHt"]],"start1":118,"start2":118,"length1":16,"length2":18}]],"length":1316,"saved":false}
+{"ts":1363445074929,"patch":[[{"diffs":[[0,">\n<?php "],[-1,"//"],[0,"echo CHt"]],"start1":118,"start2":118,"length1":18,"length2":16}]],"length":1314,"saved":false}
+{"ts":1363445076263,"patch":[[{"diffs":[[0,"\n */\n?>\n"],[1,"\n"],[0,"<?php ec"]],"start1":112,"start2":112,"length1":16,"length2":17}]],"length":1315,"saved":false}
+{"ts":1363445077306,"patch":[[{"diffs":[[0,"\n */\n?>\n"],[1,"<?php $form = $this->beginWidget('CActiveForm', array(\n    'id'=>'user-form',\n    'enableAjaxValidation'=>true,\n    'enableClientValidation'=>true,\n    'focus'=>array($model,'firstName'),\n)); ?>"],[0,"\n<?php e"]],"start1":112,"start2":112,"length1":16,"length2":210}]],"length":1509,"saved":false}
+{"ts":1363445084455,"patch":[[{"diffs":[[0,"),\n\t)\n);\n?>\n"],[1,"<"]],"start1":1497,"start2":1497,"length1":12,"length2":13}]],"length":1510,"saved":false}
+{"ts":1363445085720,"patch":[[{"diffs":[[0,",\n\t)\n);\n?>\n<"],[1,"/"]],"start1":1498,"start2":1498,"length1":12,"length2":13}]],"length":1511,"saved":false}
+{"ts":1363445087023,"patch":[[{"diffs":[[0,"\n);\n?>\n<"],[-1,"/"],[1,"?"]],"start1":1502,"start2":1502,"length1":9,"length2":9}]],"length":1511,"saved":false}
+{"ts":1363445088846,"patch":[[{"diffs":[[0,"\n\t)\n);\n?>\n<?"],[1,"php "]],"start1":1499,"start2":1499,"length1":12,"length2":16}]],"length":1515,"saved":false}
+{"ts":1363445090247,"patch":[[{"diffs":[[0,"\n\t)\n);\n?>\n<?php "],[1,"$thi"]],"start1":1499,"start2":1499,"length1":16,"length2":20}]],"length":1519,"saved":false}
+{"ts":1363445091986,"patch":[[{"diffs":[[0,");\n?>\n<?php $thi"],[1,"s->"]],"start1":1503,"start2":1503,"length1":16,"length2":19}]],"length":1522,"saved":false}
+{"ts":1363445093280,"patch":[[{"diffs":[[0,"\n);\n?>\n<?php $this->"],[1,"en"]],"start1":1502,"start2":1502,"length1":20,"length2":22}]],"length":1524,"saved":false}
+{"ts":1363445094704,"patch":[[{"diffs":[[0,"this->en"],[1,"d"]],"start1":1516,"start2":1516,"length1":8,"length2":9}]],"length":1525,"saved":false}
+{"ts":1363445096656,"patch":[[{"diffs":[[0,"his->end"],[1,"Widge"]],"start1":1517,"start2":1517,"length1":8,"length2":13}]],"length":1530,"saved":false}
+{"ts":1363445097519,"patch":[[{"diffs":[[0,"is->endWidge"],[1,"t()"]],"start1":1518,"start2":1518,"length1":12,"length2":15}]],"length":1533,"saved":false}
