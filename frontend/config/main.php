@@ -70,7 +70,7 @@ return CMap::mergeArray(
             ),
             'gii'=>array(
                 'class'=>'system.gii.GiiModule',
-                'password'=>'Alien9987!'.
+                'password'=>'Alien9987!'
             ),
         ), 
 		'components' => array(
