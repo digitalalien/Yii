@@ -2,9 +2,9 @@
 /**
  * index.php
  *
- * @author: antonio ramirez <antonio@clevertech.biz>
- * Date: 7/22/12
- * Time: 8:30 PM
+ * @author: Andrew Mallonee <amallonee@yahoo.com>
+ * Date: 3/23/2013
+ * Time: 6:30 PM
  */
 ?>
 <?php $imageUrl = "http://www.yiiframework.com/extension/jii-jcrop/files/yii-jcrop-preview.png/"; ?>

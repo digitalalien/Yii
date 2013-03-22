@@ -68,15 +68,10 @@ return CMap::mergeArray(
             //'rights'=> array(
             //    'install' => true,    
             //),
-            'gii'=>array(
-<<<<<<< HEAD
-                'class'=>'system.gii.GiiModule',
-                'password'=>'Alien9987!'
-=======
-                'class' => 'system.gii.GiiModule',
-                'password' => 'Alien9987!',
->>>>>>> e33cf9b5276f5a38ce9abcc196929d75b27d4673
-            ),
+            //'gii'=>array(
+            //    'class'=>'system.gii.GiiModule',
+            //    'password'=>'Alien9987!',
+            //),
         ), 
         'components' => array(
             'errorHandler' => array(
