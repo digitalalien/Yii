@@ -4,9 +4,9 @@
  *
  * This file holds frontend configuration settings.
  *
- * @author: antonio ramirez <antonio@clevertech.biz>
- * Date: 7/22/12
- * Time: 5:48 PM
+ * @author: Andrew Mallonee <amallonee@yahoo.com>
+ * Date: 3/23/2013
+ * Time: 3:35 PM
  */
 $frontendConfigDir = dirname(__FILE__);
 
@@ -28,84 +28,82 @@ $mainEnvFile = $frontendConfigDir . DIRECTORY_SEPARATOR . 'main-env.php';
 $mainEnvConfiguration = file_exists($mainEnvFile) ? require($mainEnvFile) : array();
 
 return CMap::mergeArray(
-	array(
-		// @see http://www.yiiframework.com/doc/api/1.1/CApplication#basePath-detail
-		'basePath' => 'frontend',
-		// set parameters
-		'params' => $params,
-		// preload components required before running applications
-		// @see http://www.yiiframework.com/doc/api/1.1/CModule#preload-detail
-		'preload' => array(
+    array(
+        // @see http://www.yiiframework.com/doc/api/1.1/CApplication#basePath-detail
+	'basePath' => 'frontend',
+	// set parameters
+	'params' => $params,
+	// preload components required before running applications
+	// @see http://www.yiiframework.com/doc/api/1.1/CModule#preload-detail
+	'preload' => array(
             'log',
             'bootstrap'
         ),
-		// @see http://www.yiiframework.com/doc/api/1.1/CApplication#language-detail
-		'language' => 'en',
-		// uncomment if a theme is used
-		/*'theme' => '',*/
-		// setup import paths aliases
-		// @see http://www.yiiframework.com/doc/api/1.1/YiiBase#import-detail
-		'import' => array(
-			'common.components.*',
-			'common.extensions.*',
+        // @see http://www.yiiframework.com/doc/api/1.1/CApplication#language-detail
+        'language' => 'en',
+        // uncomment if a theme is used
+        /*'theme' => '',*/
+        // setup import paths aliases
+        // @see http://www.yiiframework.com/doc/api/1.1/YiiBase#import-detail
+        'import' => array(
+            'common.components.*',
+            'common.extensions.*',
             'common.extensions.imageEdit.*',
-			'common.models.*',
+            'common.models.*',
             //Rights Module
-            'common.modules.rights.*',
-            'common.modules.rights.components.*',
-			// uncomment if behaviors are required
-			// you can also import a specific one
-			/* 'common.extensions.behaviors.*', */
-			// uncomment if validators on common folder are required
-			/* 'common.extensions.validators.*', */
-			'application.components.*',
-			'application.controllers.*',
-			'application.models.*'
-		),
-		/* uncomment and set if required */
-		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
-		'modules' => array(
-            'rights'=> array(
-                'install' => true,    
-            ),
+            //'application.modules.rights.*',
+            //'application.modules.rights.components.*',
+            // uncomment if behaviors are required
+            // you can also import a specific one
+            /* 'common.extensions.behaviors.*', */
+            // uncomment if validators on common folder are required
+            /* 'common.extensions.validators.*', */
+            'application.components.*',
+            'application.controllers.*',
+            'application.models.*'
+        ),
+        /* uncomment and set if required */
+        // @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
+        'modules' => array(
+            //'rights'=> array(
+            //    'install' => true,    
+            //),
             'gii'=>array(
-                'class'=>'system.gii.GiiModule',
-                'password'=>'Alien9987!'.
+                'class' => 'system.gii.GiiModule',
+                'password' => 'Alien9987!',
             ),
         ), 
-		'components' => array(
-			'errorHandler' => array(
-				// @see http://www.yiiframework.com/doc/api/1.1/CErrorHandler#errorAction-detail
-				'errorAction'=>'site/error'
-			),
+        'components' => array(
+            'errorHandler' => array(
+                // @see http://www.yiiframework.com/doc/api/1.1/CErrorHandler#errorAction-detail
+                'errorAction'=>'site/error'
+            ),
             'bootstrap'=>array(
                 'class' => 'common.extensions.bootstrap.components.Bootstrap',
                 'responsiveCss' => true,  
             ),
-//			'db' => array(
-//				'connectionString' => $params['db.connectionString'],
-//				'username' => $params['db.username'],
-//				'password' => $params['db.password'],
-//				'schemaCachingDuration' => YII_DEBUG ? 0 : 86400000, // 1000 days
-//				'enableParamLogging' => YII_DEBUG,
-//				'charset' => 'utf8'
-//			),
-			'urlManager' => array(
-				'urlFormat' => 'path',
-				'showScriptName' => false,
-				'urlSuffix' => '/',
-				'rules' => $params['url.rules']
-			),
-            'user' => array(
-                'class' => 'RWebUser',    
+            'db'=>array(
+                'connectionString' => 'mysql:host=localhost;port=3306;dbname=purplepages',
+                'username' => 'root',
+                'password' => '',
             ),
-            'authManager' => array(
-                'class' => 'RDBAuthManager',  
+            'urlManager' => array(
+                'urlFormat' => 'path',
+                'showScriptName' => false,
+                'urlSuffix' => '/',
+                'rules' => $params['url.rules']
             ),
-			/* make sure you have your cache set correctly before uncommenting */
-			/* 'cache' => $params['cache.core'], */
-			/* 'contentCache' => $params['cache.content'] */
-		),
-	),
-	CMap::mergeArray($mainEnvConfiguration, $mainLocalConfiguration)
+            //'user' => array(
+            //    'class' => 'RWebUser',    
+            //),
+            //'authManager' => array(
+            //    'class' => 'RDBAuthManager',  
+            //),
+            /* make sure you have your cache set correctly before uncommenting */
+            /* 'cache' => $params['cache.core'], */
+            /* 'contentCache' => $params['cache.content'] */
+        ),
+    ),
+        
+    CMap::mergeArray($mainEnvConfiguration, $mainLocalConfiguration)
 );
