@@ -83,9 +83,9 @@ return CMap::mergeArray(
                 'responsiveCss' => true,  
             ),
             'db'=>array(
-                'connectionString' => 'mysql:host=localhost;port=3306;dbname=purplepages',
-                'username' => 'root',
-                'password' => '',
+                'connectionString' => 'mysql:host=purplepage.db.10691077.hostedresource.com;port=3306;dbname=purplepage',
+                'username' => 'purplepage',
+                'password' => 'Alien9987!',
             ),
             'urlManager' => array(
                 'urlFormat' => 'path',
