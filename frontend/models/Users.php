@@ -1,28 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "pp_user".
+ * This is the model class for table "users".
  *
- * The followings are the available columns in table 'pp_user':
- * @property string $id
+ * The followings are the available columns in table 'users':
+ * @property integer $id
  * @property string $username
  * @property string $password
  * @property string $email
- * @property string $first_name
- * @property string $last_name
- * @property string $created_date
- * @property string $last_login
- * @property integer $active
- * @property string $ip_address
- * @property string $modified_date
- * @property string $modified_by
+ * @property string $activkey
+ * @property integer $createtime
+ * @property integer $lastvisit
+ * @property integer $superuser
+ * @property integer $status
  */
-class User extends CActiveRecord
+class Users extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Users the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -34,7 +31,7 @@ class User extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'pp_user';
+		return 'users';
 	}
 
 	/**
@@ -45,15 +42,13 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, email, first_name, last_name, created_date', 'required'),
-			array('active', 'numerical', 'integerOnly'=>true),
-			array('username, first_name, last_name, ip_address', 'length', 'max'=>25),
-			array('password, email', 'length', 'max'=>50),
-			array('modified_by', 'length', 'max'=>20),
-			array('last_login, modified_date', 'safe'),
+			array('username, password, email', 'required'),
+			array('createtime, lastvisit, superuser, status', 'numerical', 'integerOnly'=>true),
+			array('username', 'length', 'max'=>20),
+			array('password, email, activkey', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, username, password, email, first_name, last_name, created_date, last_login, active, ip_address, modified_date, modified_by', 'safe', 'on'=>'search'),
+			array('id, username, password, email, activkey, createtime, lastvisit, superuser, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,14 +73,11 @@ class User extends CActiveRecord
 			'username' => 'Username',
 			'password' => 'Password',
 			'email' => 'Email',
-			'first_name' => 'First Name',
-			'last_name' => 'Last Name',
-			'created_date' => 'Created Date',
-			'last_login' => 'Last Login',
-			'active' => 'Active',
-			'ip_address' => 'Ip Address',
-			'modified_date' => 'Modified Date',
-			'modified_by' => 'Modified By',
+			'activkey' => 'Activkey',
+			'createtime' => 'Createtime',
+			'lastvisit' => 'Lastvisit',
+			'superuser' => 'Superuser',
+			'status' => 'Status',
 		);
 	}
 
@@ -100,18 +92,15 @@ class User extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('email',$this->email,true);
-		$criteria->compare('first_name',$this->first_name,true);
-		$criteria->compare('last_name',$this->last_name,true);
-		$criteria->compare('created_date',$this->created_date,true);
-		$criteria->compare('last_login',$this->last_login,true);
-		$criteria->compare('active',$this->active);
-		$criteria->compare('ip_address',$this->ip_address,true);
-		$criteria->compare('modified_date',$this->modified_date,true);
-		$criteria->compare('modified_by',$this->modified_by,true);
+		$criteria->compare('activkey',$this->activkey,true);
+		$criteria->compare('createtime',$this->createtime);
+		$criteria->compare('lastvisit',$this->lastvisit);
+		$criteria->compare('superuser',$this->superuser);
+		$criteria->compare('status',$this->status);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
