@@ -50,9 +50,12 @@ return CMap::mergeArray(
             'common.extensions.*',
             'common.extensions.imageEdit.*',
             'common.models.*',
+            //User Module
+            'common.modules.user.models.*',
+            'common.modules.user.components.*',
             //Rights Module
-            //'application.modules.rights.*',
-            //'application.modules.rights.components.*',
+            'common.modules.rights.*',
+            'common.modules.rights.components.*',
             // uncomment if behaviors are required
             // you can also import a specific one
             /* 'common.extensions.behaviors.*', */
@@ -65,15 +68,38 @@ return CMap::mergeArray(
         /* uncomment and set if required */
         // @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
         'modules' => array(
-            //'rights'=> array(
-            //    'install' => true,    
-            //),
-            //'gii'=>array(
-            //    'class'=>'system.gii.GiiModule',
-            //    'password'=>'Alien9987!',
-            //),
+            'rights'=> array(
+                'install' => false,    
+            ),
+            'message' => array(
+                'userModel' => 'Users',
+                'getNameMethod' => 'getFullName',
+                'getSuggestMethod' => 'getSuggest',
+                'viewPath' => '/message/fancy',
+            ),
+            'user' => array(
+                'hash' => 'md5',
+                'sendActivationEmail' => true,
+                'loginNotActive' => false,
+                'activeAfterRegister' => false,
+                'autoLogin' => true,
+                'registrationUrl' => array('/user/registration'),
+                'recoveryUrl' => array('/user/recovery'),
+                'loginUrl' => array('/user/login'),
+                'returnUrl' => array('/user/profile'),
+                'returnLogoutUrl' => array('/user/login'),
+            ),
+            'gii'=>array(
+                'class'=>'system.gii.GiiModule',
+                'password'=>'Alien9987!',
+            ),
         ), 
         'components' => array(
+            'user'=>array(
+                'class' => 'RWebUser',
+                'allowAutoLogin' => true,
+                'loginUrl' => array('/user/login'),
+            ),
             'errorHandler' => array(
                 // @see http://www.yiiframework.com/doc/api/1.1/CErrorHandler#errorAction-detail
                 'errorAction'=>'site/error'
@@ -86,6 +112,7 @@ return CMap::mergeArray(
                 'connectionString' => 'mysql:host=purplepage.db.10691077.hostedresource.com;port=3306;dbname=purplepage',
                 'username' => 'purplepage',
                 'password' => 'Alien9987!',
+                'charset' => 'utf8',
             ),
             'urlManager' => array(
                 'urlFormat' => 'path',
@@ -96,9 +123,12 @@ return CMap::mergeArray(
             //'user' => array(
             //    'class' => 'RWebUser',    
             //),
-            //'authManager' => array(
-            //    'class' => 'RDBAuthManager',  
-            //),
+            'authManager' => array(
+                'class' => 'RDbAuthManager',
+                'connectionID' => 'db',
+                'defaultRoles' => array('Authenticated', 'Guest'),
+                'assignmentTable' => 'authassignment',
+            ),
             /* make sure you have your cache set correctly before uncommenting */
             /* 'cache' => $params['cache.core'], */
             /* 'contentCache' => $params['cache.content'] */
